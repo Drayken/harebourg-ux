@@ -2,6 +2,18 @@
 
 Overlay de projection pour la mécanique de confusion lors du combat final du Donjon du Comte Harebourg. Projette une map tactique sur votre écran, lis le chat dofus pour prendre en compte votre état de confusion, et vous montre la case réelle de vos sorts.
 
+## Avertissement
+
+Harebourg UX n'est ni affilié à Ankama, ni endorsé par Ankama. Harebourg UX ne modifie pas le client et ne lit ni fichiers, ni mémoire, ni paquets. Seul le rectangle de chat que vous tracez est lu, pour le texte de confusion. Ça ne viole pas directement les conditions d'Ankama, sans garantie : l'auteur n'est pas responsable en cas de ban. Même genre d'aide que le [simulateur Comte Harebourg](https://www.comteharebourg.com/), très répandu mais non officiel.
+
+La feuille peut servir en parallèle, pour recouper la direction à l'œil.
+
+<p align="center">
+  <img src="harebourg-help.png" alt="Mécanique des PI : croix des pourcentages et moyen mémo-technique GDBDG (gauche, droite, bas, droite, gauche)" width="640">
+</p>
+
+Moyen mémo-technique : « J'ai des banques de guildes » = **GDBDG** = gauche, droite, bas, droite, gauche.
+
 ## Installation
 
 1. Installer [Python 3.14+](https://www.python.org/downloads/windows/) (cocher **py launcher**).
