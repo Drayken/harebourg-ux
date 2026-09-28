@@ -706,7 +706,7 @@ class Overlay:
         user32.AppendMenuW(menu, MF_SEPARATOR, 0, None)
         for command_id, action in BIND_COMMANDS.items():
             flags = MF_STRING | (MF_CHECKED if self.rebinding == action else 0)
-            text = f"{binds.ACTION_NAMES[action]} : {self._label(self.binds[action])}"
+            text = "Raccourci Moi" if action == binds.MARK_SELF else "Raccourci Cible"
             user32.AppendMenuW(menu, flags, command_id, text)
         reset_flags = MF_STRING | (MF_GRAYED if self.binds == dict(binds.DEFAULTS) else 0)
         user32.AppendMenuW(menu, reset_flags, CMD_BIND_RESET, "Touches par défaut")
@@ -925,7 +925,7 @@ class Overlay:
         pin = self._label(self.binds[binds.PIN])
         return (
             HINT_DIRECTIONS,
-            (Key(mark), "moi", Key(pin), "cible", Key("Maj"), "+", Key("Suppr"), "effacer la cible"),
+            (Key(mark), "Moi", Key(pin), "Cible", Key("Maj"), "+", Key("Suppr"), "effacer la cible"),
         )
 
     def _bind_hint(self, action: str) -> tuple[HintLine, ...]:
@@ -933,7 +933,8 @@ class Overlay:
             detail: HintLine = (self._bind_error,)
         else:
             detail = ("Une touche (Ctrl, Maj, Alt possibles) ou", Key("Souris 3"), Key("4"), Key("5"))
-        return ((f"Nouvelle touche : {binds.ACTION_NAMES[action]}", Key("Échap"), "annuler"), detail)
+        name = "Moi" if action == binds.MARK_SELF else "Cible"
+        return ((f"Nouvelle touche : {name}", Key("Échap"), "annuler"), detail)
 
     def redraw_map(self) -> None:
         if self._client is None:

@@ -37,16 +37,6 @@ La feuille peut servir en parallèle pour vérifier en cas où l'OCR fonctionner
 2. Souris 5 (MB5) pour marquer votre cible **(Cible)**.
 3. La case rouge **(Vise)** démontre la case sur laquelle jeter vos sorts. 
 
-## Menu
-
-| Entrée | Effet |
-|---|---|
-| Masquer / Afficher | Cache/affiche le dessin (chat et raccourcis restent actifs) |
-| Régler la carte / le chat | Refaire le réglage |
-| Marquer ma case / Épingler la cible | Changer la touche : appuyer sur une touche (Ctrl, Maj, Alt possibles) ou Souris 3/4/5. Échap annule. |
-| Touches par défaut | Revenir à Souris 4 / Souris 5 |
-| Quitter | Fermer |
-
 ## Dépannage
 
 | Problème | Solution |
