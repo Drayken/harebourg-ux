@@ -2,7 +2,7 @@
 
 Overlay de projection pour la mécanique de confusion lors du combat final du Donjon du Comte Harebourg. Projette une map tactique sur votre écran, lis le chat dofus pour prendre en compte votre état de confusion, et vous montre la case réelle de vos sorts.
 
-Harebourg UX n'est ni affilié, ni endorsé par Ankama. Malgré le fait que Harebourg UX ne modifie pas le client et ne lit ni fichiers, ni mémoire, ni paquets, et ne viole pas directement les conditions d'Ankama - nous ne pouvons pas garantir être prôtéger contre les bans, et ne pouvons pas être tenu responsable. L'application est similaire *(on crack)* au [simulateur Comte Harebourg](https://www.comteharebourg.com/) qui est très répandu.  
+Harebourg UX n'est ni affilié, ni endorsé par Ankama. Malgré le fait que Harebourg UX ne modifie pas le client et ne lit ni fichiers, ni mémoire, ni paquets, et ne viole pas directement les conditions d'Ankama - nous ne pouvons pas garantir être prôtéger contre les bans, et ne pouvons pas être tenu responsable. L'application est similaire *(on crack)* au [simulateur Comte Harebourg](https://www.comteharebourg.com/) qui est très répandu, en mode overlay au lieu d'une fenêtre séparée.  
   
 
 <p align="center">
