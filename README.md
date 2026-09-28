@@ -45,7 +45,7 @@ La feuille peut servir en parallèle pour vérifier en cas où l'OCR fonctionner
 
 | Problème | Solution |
 |---|---|
-| Direction ne suit pas le chat | Lire `config\last-ocr.txt` à côté du lanceur. Texte trop petit → agrandir police du chat ou échelle d'interface. |
+| Direction ne suit pas le chat | Vérifier logs `config\last-ocr.txt`. Texte trop petit → agrandir police du chat ou échelle d'interface. |
 | Grille décalée | Refaire **Régler la carte**. |
 | Harebourg UX s'est arrêté | Détails dans `config\harebourg.log`. |
 
