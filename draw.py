@@ -513,7 +513,7 @@ def _paint(
 
     with _typeface("Segoe UI Semibold", px(13)) as font, _brush(_argb(255, *_INK)) as ink:
         _draw_string(
-            graphics, "Confusion du Comte", font, ink, left, top, panel_w, header_h, StringAlignmentCenter
+            graphics, "Harebourg UX", font, ink, left, top, panel_w, header_h, StringAlignmentCenter
         )
 
     pad = px(14)

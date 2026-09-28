@@ -27,11 +27,15 @@ class LabelTests(unittest.TestCase):
 
 class ProblemTests(unittest.TestCase):
     def test_accepted_binds(self) -> None:
-        for bind in (Bind.mouse(3), Bind.mouse(5), Bind.keyboard(VK_F5), Bind.keyboard(VK_A, MOD_CONTROL)):
+        for bind in (
+            Bind.mouse(3),
+            Bind.mouse(5),
+            Bind.keyboard(VK_F5),
+            Bind.keyboard(VK_A),
+            Bind.keyboard(0x31),
+            Bind.keyboard(VK_A, MOD_CONTROL),
+        ):
             self.assertIsNone(binds.problem(bind, {}), bind)
-
-    def test_typing_key_needs_a_modifier(self) -> None:
-        self.assertIsNotNone(binds.problem(Bind.keyboard(VK_A), {}))
 
     def test_refused_binds(self) -> None:
         self.assertIsNotNone(binds.problem(Bind.mouse(1), {}))
@@ -60,7 +64,7 @@ class StorageTests(unittest.TestCase):
         self.assertEqual(profiles.find_binds(self.path), saved)
 
     def test_invalid_entry_falls_back_per_action(self) -> None:
-        data = {binds.MARK_SELF: {"key": VK_A, "mods": 0}, binds.PIN: {"button": 3}}
+        data = {binds.MARK_SELF: {"key": binds.VK_ESCAPE, "mods": 0}, binds.PIN: {"button": 3}}
         self.assertEqual(binds.from_json(data), {binds.MARK_SELF: Bind.mouse(4), binds.PIN: Bind.mouse(3)})
 
     def test_clashing_binds_fall_back_to_defaults(self) -> None:

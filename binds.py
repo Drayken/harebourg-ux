@@ -56,9 +56,6 @@ _NAMES.update({vk: chr(vk) for vk in range(0x41, 0x5B)})
 _NAMES.update({0x60 + n: f"Pavé {n}" for n in range(10)})
 _NAMES.update({0x70 + n: f"F{n + 1}" for n in range(24)})
 
-# Keys that do not type text, so they can be taken without a modifier.
-FREE_KEYS = frozenset({0x13, 0x21, 0x22, 0x23, 0x24, 0x2D, 0x2E, 0x91, *range(0x70, 0x88)})
-
 
 @dataclass(frozen=True)
 class Bind:
@@ -104,8 +101,6 @@ def problem(bind: Bind, taken: Mapping[Bind, str]) -> str | None:
         return "Échap sert à annuler."
     elif bind.key in MODIFIER_KEYS or not 0 < bind.key < 0xFF:
         return "Touche non prise en charge."
-    elif not bind.mods and bind.key not in FREE_KEYS:
-        return "Ajoutez Ctrl, Maj ou Alt : cette touche sert à écrire."
     if bind in taken:
         return f"Déjà utilisée : {taken[bind]}."
     return None

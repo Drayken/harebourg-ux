@@ -33,9 +33,10 @@ La feuille peut servir en parallèle pour vérifier en cas où l'OCR fonctionner
 
 ## Utilisation
 
-1. Souris 4 (MB4) pour marquer votre case **(Moi)**, a refaire après chaque déplacement.
-2. Souris 5 (MB5) pour marquer votre cible **(Cible)**.
-3. La case rouge **(Vise)** démontre la case sur laquelle jeter vos sorts. 
+1. L'application lis le chat automatiquement pour ajuster l'état confusion.
+2. Souris 4 (MB4) pour marquer votre case **(Moi)**, a refaire après chaque déplacement.
+3. Souris 5 (MB5) pour marquer votre cible **(Cible)**.
+4. La case rouge **(Vise)** démontre la case où jeter vos sorts. 
 
 ## Dépannage
 
