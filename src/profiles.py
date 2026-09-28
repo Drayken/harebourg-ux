@@ -1,4 +1,4 @@
-"""Map alignment profiles, the chat anchor and key binds, kept under %AppData%\\HarebourgUx\\.
+"""Map alignment profiles, the chat anchor and key binds, kept in config/ next to the app.
 
 A profile belongs to one map at one Dofus client size, relative to that
 client area. A different client size never reuses it. The chat rectangle
@@ -14,7 +14,7 @@ from pathlib import Path
 import binds
 from grid import Projection
 
-SETTINGS_DIR = Path(os.environ.get("APPDATA") or Path.home()) / "HarebourgUx"
+SETTINGS_DIR = Path(__file__).resolve().parents[1] / "config"
 PROFILES_PATH = SETTINGS_DIR / "profiles.json"
 CHAT_PATH = SETTINGS_DIR / "chat.json"
 BINDS_PATH = SETTINGS_DIR / "binds.json"

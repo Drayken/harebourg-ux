@@ -3,13 +3,13 @@
 from __future__ import annotations
 
 import ctypes
-import os
 import sys
 import traceback
 from pathlib import Path
 
 TITLE = "Harebourg UX"
-LOG_PATH = Path(os.environ.get("APPDATA") or Path.home()) / "HarebourgUx" / "harebourg.log"
+ROOT = Path(__file__).resolve().parent
+LOG_PATH = ROOT / "config" / "harebourg.log"
 MB_ICONERROR = 0x10
 MB_ICONINFORMATION = 0x40
 ERROR_ALREADY_EXISTS = 183
@@ -45,7 +45,7 @@ def main() -> int:
         # pythonw has no console; tracebacks from window callbacks would be lost.
         sys.stderr = log
 
-    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    sys.path.insert(0, str(ROOT / "src"))
     try:
         import overlay
 

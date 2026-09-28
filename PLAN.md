@@ -135,14 +135,14 @@ Cell lists: empty, walkable, wall. Only the main Comte map: lieutenant fights ar
 ## Repo layout
 
 - `harebourg.pyw` — entry point. Double-click starts the overlay with no console.
-- `confusion.py` — states, π parser, melee bump
-- `chat.py` — OCR lines to log entries, speaker filter, Comtoise turn starts, frame-to-frame new-line detection
-- `ocr.py` — Windows OCR through combase, on a worker thread
-- `grid.py` — projection and hit testing
-- `draw.py` — sharp diamond rendering
-- `overlay.py` — the only module allowed to call Win32
-- `profiles.py` — alignment profiles under `%AppData%\HarebourgUx\`
-- `maps/` — one file per fight layout
+- `src/confusion.py` — states, π parser, melee bump
+- `src/chat.py` — OCR lines to log entries, speaker filter, Comtoise turn starts, frame-to-frame new-line detection
+- `src/ocr.py` — Windows OCR through combase, on a worker thread
+- `src/grid.py` — projection and hit testing
+- `src/draw.py` — sharp diamond rendering
+- `src/overlay.py` — the only module allowed to call Win32
+- `src/profiles.py` — alignment profiles in `config/` next to the launcher
+- `src/maps/` — one file per fight layout
 - `tests/test_confusion.py` — parser and rotation checks, for contributors
 - `tests/test_chat.py` — entry joining, speaker filter, new-line detection
 - `tests/test_grid.py` — map parsing, projection, and hit-test checks
@@ -199,7 +199,7 @@ Nothing left. Dropped after playtesting:
 
 ## Local data
 
-Keep settings on the machine, not in the repo, under `%AppData%\HarebourgUx\`:
+Keep settings in `config/` next to the launcher. That folder is gitignored:
 
 - character name
 - chat-region anchor
